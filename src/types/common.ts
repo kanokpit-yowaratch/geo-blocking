@@ -16,6 +16,13 @@ export interface GeoBlockConfig {
   enableLogging: boolean;
 }
 
+export interface GeoData {
+  country: string;
+  city: string;
+  ip: string;
+  timestamp: string;
+}
+
 export const geoConfig: GeoBlockConfig = {
   // ISO 3166-1 alpha-2 country codes
   blockedCountries: [

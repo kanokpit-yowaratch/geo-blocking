@@ -2,19 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { Globe, MapPin, Shield, Clock } from 'lucide-react';
-
-interface GeoData {
-  country: string;
-  city: string;
-  ip: string;
-  timestamp: string;
-}
+import { GeoData } from '@/types/common';
 
 export default function GeoInfo() {
   const [geoData, setGeoData] = useState<GeoData | null>(null);
 
   useEffect(() => {
-    // Get geo data from headers or API
     const fetchGeoData = async () => {
       try {
         const response = await fetch('/api/geo');
@@ -22,7 +15,6 @@ export default function GeoInfo() {
         setGeoData(data);
       } catch (error) {
         console.error('Failed to fetch geo data:', error);
-        // Fallback to client-side detection
         setGeoData({
           country: 'Unknown',
           city: 'Unknown',
