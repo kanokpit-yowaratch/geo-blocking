@@ -73,7 +73,6 @@ export default function HomePage() {
                   <li>• โหมด Blacklist/Whitelist</li>
                   <li>• การบล็อกตามประเทศ</li>
                   <li>• หน้าสำหรับเปลี่ยนเส้นทางที่กำหนดเองได้</li>
-                  <li>• บันทึกการเข้าถึงอย่างละเอียด</li>
                 </ul>
               </div>
             </div>
